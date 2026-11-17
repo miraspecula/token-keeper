@@ -1,7 +1,7 @@
 name: token_keeper
 description: Локальный менеджер токенов с шифрованием по мастер-паролю.
 publish_to: 'none'
-version: 0.3.1+5
+version: 0.3.2+6
 
 environment:
   sdk: ^3.14.0

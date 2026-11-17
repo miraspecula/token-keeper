@@ -469,7 +469,7 @@ class _CardEditScreenState extends State<CardEditScreen> {
                 labelText: 'URL (необязательно)',
                 hintText: 'https://api.example.com/v1',
                 helperText: _providerHint(),
-                helperMaxLines: 2,
+                helperMaxLines: 4, // длинный URL своего сервиса не обрезается
                 border: const OutlineInputBorder(),
                 suffixIcon: CopyFieldButton(controller: _url),
               ),

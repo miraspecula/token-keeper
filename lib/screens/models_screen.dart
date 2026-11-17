@@ -126,6 +126,9 @@ class _ModelsScreenState extends State<ModelsScreen> {
           ),
           Expanded(
             child: ListView.builder(
+              // FAB здесь нет; снизу — только системная панель и небольшой запас.
+              padding: EdgeInsets.only(
+                  bottom: 8 + MediaQuery.paddingOf(context).bottom),
               itemCount: items.length,
               itemBuilder: (context, i) {
                 final m = items[i];

@@ -7,6 +7,9 @@ import '../widgets.dart';
 import 'card_edit_screen.dart';
 import 'settings_screen.dart';
 
+/// Нижний отступ списка карточек под FloatingActionButton.
+const double fabClearance = 88;
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -106,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: const InputDecoration(
                       isDense: true,
                       prefixIcon: Icon(Icons.search),
-                      hintText: 'Поиск по названию, домену, токену',
+                      hintText: 'Поиск',
                       border: OutlineInputBorder(),
                     ),
                   ),
@@ -146,6 +149,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   )
                 : ListView.builder(
+                    // Запас снизу под кнопку «+» (56 dp + отступы) и системную
+                    // панель, чтобы кнопка не закрывала действия последней
+                    // карточки, когда список прокручен до конца.
+                    padding: EdgeInsets.only(
+                        bottom: fabClearance +
+                            MediaQuery.paddingOf(context).bottom),
                     itemCount: cards.length,
                     itemBuilder: (context, i) {
                       final c = cards[i];

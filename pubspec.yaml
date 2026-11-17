@@ -1,0 +1,31 @@
+name: token_keeper
+description: Локальный менеджер токенов с шифрованием по мастер-паролю.
+publish_to: 'none'
+version: 0.3.1+5
+
+environment:
+  sdk: ^3.14.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  material_ui: ^1.11.1
+  pointycastle: ^4.0.0
+  http: ^1.2.0
+  path_provider: ^2.1.1
+  shared_preferences: ^2.2.2
+  share_plus: ^13.3.1
+  file_picker: ^13.4.0
+  image: ^4.13.1
+  flutter_svg: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/washer.png
+    - assets/public_suffix_list.dat

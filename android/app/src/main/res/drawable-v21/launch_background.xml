@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Заставка до Android 12: тёмный фон и шайба по центру. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/tk_splash_background" />
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/launch_washer" />
+    </item>
+</layer-list>
